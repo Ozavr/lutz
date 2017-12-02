@@ -10,7 +10,7 @@ import _thread as thread, queue, time
 
 
 safeprint = thread.allocate_lock()
-dataQueue = queue.Queue
+dataQueue = queue.Queue()
 
 
 def producer(idnum):
@@ -18,7 +18,8 @@ def producer(idnum):
         time.sleep(idnum)
         dataQueue.put('[producer id=%d, count=%d]' % (idnum, msgnum))
 
-def counsumer(idnum):
+
+def consumer(idnum):
     while True:
         time.sleep(0.1)
         try:
