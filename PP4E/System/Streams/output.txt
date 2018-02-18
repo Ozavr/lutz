@@ -1,0 +1,2 @@
+Hello stream world
+Enter a number>Bye
